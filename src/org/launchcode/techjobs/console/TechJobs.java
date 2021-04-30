@@ -40,14 +40,16 @@ public class TechJobs {
                 } else {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
-//                    ArrayList<String> sortedResults = Collections.sort(results);
+
+                   //Sort results
+                   Collections.sort(results);
 
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
-                    System.out.println(results);
+
                     // Print list of skills, employers, etc
-//                    for (String item : results) {
-//                        System.out.println(item);
-//                    }
+                    for (String item : results) {
+                        System.out.println(item);
+                    }
                 }
 
             }    else { // choice is "search"
